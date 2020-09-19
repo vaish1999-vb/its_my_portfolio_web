@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My_Portfolio_Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+    
+}
+{
+    background-color: #000000;
+    position: fixed;
+}
+
+
+.container{
+    max-width:1140px;
+    margin: auto;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
+header{
+    
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #423940;
+    padding: 0px 15px;
+    z-index: 10;
+}
+header.fixed{
+    background-color: #000000;
+    position: fixed;
+}
+header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+header .brand-name a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header .brand-name a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+    
+}
+header .navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 72px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+    position: relative;
+}
+header .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 0%;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+header .navbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+header .navbar ul li a.active::before{
+    width: 100%;
+    left: 0;
+}
+
+
+.checkbtn{
+  font-size: 25px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+/*hobbies*/
+/*hobbies*/
+.hobby{
+  padding: 100px 15px;
+  background-color: #f5f8fd;
+  
+}
+.hobby .section-title{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.hobby .section-title h1{
+  display: inline-block;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700px;
+  color: #000000;
+  margin: 0 0 10px;
+  position: relative;
+  align-items: center;
+}
+.hobby .section-title h1:before{
+  content: '';
+  left: 30%;
+  position: absolute;
+  height: 2px;
+  right: 30%;
+  background-color: #febd01;
+  bottom: 0px;
+}
+.hobby .filter-buttons{
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.hobby .filter-buttons ul{
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.hobby .filter-buttons ul li{
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-block;
+  margin: 0px 8px;
+  text-transform: uppercase;
+  cursor:pointer;
+  padding-bottom: 10px;
+}
+.hobby .filter-buttons ul li.active{
+  color: #febd01;
+  border-bottom: 2px solid #febd01;
+}
+.hobby .filter-buttons{
+  margin-bottom: 25px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  padding-right: 10px;
+  padding-left: 110px;
+}
+.hobbyy .section-title{
+  flex: 0 0 100%;
+  
+  margin-bottom: 20px;
+  margin-left: -80px;
+  
+  text-align: center;
+  
+}
+.hobbyy .section-title h1{
+  display: inline-block;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700px;
+  color: #000000;
+  margin: 0 0 10px;
+  margin-left: 120px;
+  
+  position: relative;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.sing{
+  padding: 60px 15px;
+  
+  height: 15px;
+  
+}
+.sing .title{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.sing .title h1{
+  display: inline-block;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 500px;
+  color: #000000;
+  margin: 0 0 10px;
+  position: relative;
+  align-items: center;
+}
+.sing .title h1:before{
+  content: '';
+  left: 30%;
+  position: absolute;
+  height: 2px;
+  right: 30%;
+  background-color: #febd01;
+  bottom: 0px;
+}
+.song{
+  padding:35px;
+  margin-top: 0px;
+  margin-left: 15px;
+  
+}
+/*end*/
+
+
+footer{
+  padding: 80px 15px;
+  background-color: #0c0c17;
+}
+
+
+
+footer .logo{
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  font-size: 45px;
+  color: #ffffff;
+  font-weight: 900;
+}
+footer .social{
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+footer .social a{
+  color: #999999;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 12px;
+  transition: all .5s  ease;
+}
+footer .social a:hover{
+  color: #ffffff;
+}
+
+.copyright{
+  background-color: #0c0c17;
+  border-top: 1px solid #1d1d27;
+  padding: 15px;
+}
+.copyright p{
+  color: #838383;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+@media(max-width: 767px){
+    
+        
+    
+
+  header .checkbtn{
+    display: block;
+    
+  }
+  
+  header .navbar ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  header .navbar ul li{
+    display: block;
+    margin: 15px 0;
+    line-height: 7px;
+  }
+  header .navbar ul li a{
+    font-size: 16px;
+    
+  }
+  a:hover,a.active{
+    background: none;
+     color: #0082e6;
+    
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+footer{
+    width:105%;
+}
+.copyright{
+    width: 105%;
+}
+
+}
+    </style>
+  </head>
+  <body>
+
+    <header class="fixed">
+        <div class="container">
+            <div class="row">
+              <div class="brand-name">
+                  <a href="" class="logo">Vaishnavi</a>
+              </div>
+              
+              <div class="navbar">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                  <i class="fa fa-bars"></i>
+                </label>
+                 <ul>
+                    <li><a href="homeport.html">Home</a></li>
+                    <li><a href="aboutport.html">About</a></li>
+                    <li><a href="skillsport.html">Skills</a></li>
+                    
+                    <li><a href="hobbyport.html">Hobbies</a></li>
+                    <li><a href="contactport.html">Contact</a></li>
+                 </ul>
+               </div>
+            </div>
+        </div>
+    </header>
+
+    <!--start hobby-->
+<section>
+    <section class="hobby">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>My Hobbies</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="filter-buttons">
+                    <ul id="filter-btns">
+                        <li class="active" data-target="all">All</li>
+                        <li data-target="sketching">Sketching</li>
+                        <li data-target="travelling">Travelling</li>
+                        <li data-target="photography">Photography</li>
+                        <li data-target="singing">Singing</li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+       
+    <p><center>NOTE: Move the cursor over or around the image below to open the content.</center></p>
+    </section>  
+  <section>
+    <div class="dropdown">
+    
+        <img src="nature.jpeg" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="nature.jpeg" alt="hobby" width="500" height="400">
+        <div class="desc"></div>
+        </div>
+      </div>   
+      <div class="dropdown">
+        <img src="4.jpg" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="4.jpg" alt="hobby" width="500" height="400">
+        <div class="desc">photography is an immediate reaction, drawing is a meditation.</div>
+        </div>
+      </div> 
+      <div class="dropdown">
+        <img src="14.jpg" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="14.jpg" alt="hobby" width="500" height="400">
+        <div class="desc">Photography is the story I fail to put into words.</div>
+        </div>
+      </div>   
+      <div class="dropdown">
+        <img src="nature1.png" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="nature1.png" alt="hobby" width="500" height="300">
+        <div class="desc">Photography is a way of feeling,of touching,of loving.</div>
+        </div>
+      </div>   
+      <div class="dropdown">
+        <img src="3.jpg" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="3.jpg" alt="hobby" width="500" height="300">
+        <div class="desc">Art is not what you see,but  what you make others see.</div>
+        </div>
+      </div>  
+      <div class="dropdown">
+        <img src="23.jpg" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="23.jpg" alt="hobby" width="500" height="500">
+        <div class="desc">It's the journey that matters.</div>
+        </div>
+      </div>   
+      <div class="dropdown">
+        <img src="11.png" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="11.png" alt="hobby" width="500" height="300">
+        <div class="desc">Only photograpg what you love.</div>
+        </div>
+      </div>    
+      <div class="dropdown">
+        <img src="2.jpg" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="2.jpg" alt="hobby" width="500" height="400">
+        <div class="desc">There are no words in a drawing.</div>
+        </div>
+      </div> 
+      <div class="dropdown">
+        <img src="21.jpg" alt="hobby" width="235" height="150">
+        <div class="dropdown-content">
+        <img src="21.jpg" alt="hobby" width="500" height="500">
+        <div class="desc">Travel is never a matter of money but of courage.</div>
+        </div>
+      </div>                                       
+    </section>
+    <section>
+        <section class="sing">
+            
+                <div class="row">
+                    <div class="title">
+                        <h1>Check My Published Songs Here....</h1>
+                    </div>
+                </div>
+            
+    </section>    
+    <div class="song">
+    <audio controls>
+        
+        <source src="mysongaafreen.mp4" type="audio/mpeg">
+    </audio>
+    <audio controls>
+        <source src="mysong.mp4" type="audio/mpeg">
+    </audio>
+    <audio controls>
+        <source src="mysong1.mp4" type="audio/mpeg">
+    </audio>
+      
+    <audio controls>
+        <source src="mysong2.mp4" type="audio/mpeg">
+    </audio>
+    <audio controls>
+        <source src="mysong5.mp4" type="audio/mpeg">
+    </audio>
+    <audio controls>
+        <source src="mysong7.mp4" type="audio/mpeg">
+    </audio>
+    </div>
+      
+      
+      
+    <!--end-->
+    
+    <!--end hobby-->  
+    
+    <!--start footer-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                Vaishnavi
+            </div>
+            <div class="social">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-telegram"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-whatsapp"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+            </div>
+        </div>
+    
+  </footer>
+  
+  <section class="copyright">
+    <div class="container">
+        <p>&copy; 2020 copyright all right reserved</p>
+    </div>
+  </section>
+    <!-- end home-->
+    <script src="newport.js"></script>
+</body>
+</html>
