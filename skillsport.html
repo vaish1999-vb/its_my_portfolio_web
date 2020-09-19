@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My_Portfolio_Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+    
+}
+{
+    background-color: #000000;
+    position: fixed;
+}
+
+
+.container{
+    max-width:1140px;
+    margin: auto;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
+header{
+    
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #423940;
+    padding: 0px 15px;
+    z-index: 10;
+}
+header.fixed{
+    background-color: #000000;
+    position: fixed;
+}
+header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+header .brand-name a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header .brand-name a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+    
+}
+header .navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 72px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+    position: relative;
+}
+header .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 0%;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+header .navbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+header .navbar ul li a.active::before{
+    width: 100%;
+    left: 0;
+}
+
+
+.checkbtn{
+  font-size: 25px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+/*startskills*/
+/*start of professional skills*/
+.pskill{
+  padding: 60px 15px;
+  background-color: #f5f8fd;
+  
+  
+}
+.pskill .section-title{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+  
+}
+.pskill .section-title h1{
+  display: inline-block;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700px;
+  color: #000000;
+  margin: 0 0 10px;
+  position: relative;
+  align-items: center;
+  padding-top: 20px;
+}
+.pskill .section-title h1:before{
+  content: '';
+  left: 30%;
+  position: absolute;
+  height: 2px;
+  right: 30%;
+  background-color: #febd01;
+  bottom: 0px;
+}
+
+.container3{
+  width: 90%;
+  overflow: hidden;
+  background: #f9f9f9;
+  margin: 20px auto;
+  padding:30px 0px;
+}
+.container3 ul{
+  padding:0px;
+  margin: 0px;
+}
+
+.container3 ul li{
+	position:relative;
+	width: calc(400px - 38px);
+	height: calc(300px - 50px);
+	background: #000;
+	float: left;
+	margin: 15px;
+	box-sizing:border-box;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.container3 .my .text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	background: grey;
+	transition: 0.5s;
+	z-index:1;
+}
+
+.container3 .my:hover .text{
+	top: 20px;
+	right: calc(50% -40px);
+	width: 80px;
+	height: 80px;
+	border-radius: 70%;
+}
+.container3 .my .text .word{
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+	transition: 0.5s;
+	color: black;
+}
+.container3 .my:hover .text .word{
+	font-size:15px;
+}
+.container3 .my .content{
+	position: absolute;
+	top: 60px;
+	height: calc(100% - 60px);
+	text-align: center;
+	padding:5px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	opacity: 0;
+}
+.container3 .my:hover .content{
+	top:100px;
+	opacity: 1;
+}
+.container3 .my .content h5{
+	margin:0;
+	padding: 0;
+	color: #fff;
+	font-size:20px;
+}
+
+.container3 .my .content p{
+	margin:0;
+	padding: 0;
+	color: #fff;
+	
+} 
+
+/*skills*/
+.skills{
+  padding: 100px 15px;
+  background-color: #ffffff;
+}
+.skills .skills-content{
+  padding-right: 40px;
+  max-width: 70%;
+}
+
+.skills .section-title{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+  
+}
+.skills .section-title h1{
+  display: inline-block;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700px;
+  color: #000000;
+  margin: 0 0 10px;
+  position: relative;
+  
+}
+.skills .section-title h1:before{
+  content: '';
+  left: 0;
+  position: absolute;
+  height: 2px;
+  right: 30%;
+  background-color: #febd01;
+  bottom: 0px;
+}
+
+.align-items-center{
+  align-items: center;
+}
+.skills .img img{
+  width: 60vh;
+  display:block;
+  height: 80vh;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  
+}
+.skills .skills-content .section-title p{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #838383;
+  margin: 15 0 20px;
+}
+.skills .skills-content .skills-box{
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+.skills .skills-content .skills-box h6{
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 8px;
+}
+.skills .skills-content .skills-box .skill-bar{
+  height: 5px;
+  background-color: #eeeeee;
+  position: relative;
+}
+.skills .skills-content .skills-box .skill-bar .skill-bar-in{
+  background-color: #febd01;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.skills .skills-content .skills-box .skill-bar .skill-bar-in span{
+  color: #838383;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+
+
+@media screen and (max-width: 1250px){
+  .container3 ul li{
+    width: 40%;
+    margin-left: 40px;
+  }
+
+}
+@media screen and (max-width: 750px){
+  .container3{
+    width: 100%;
+    padding: 0px;
+  }
+  .container3 ul li{
+    float: none;
+    width: 90%;
+    margin: 40px auto;
+  }
+  .pskill .section-title h1{
+    padding-top: 50px;
+}
+.skills .skills-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0px;
+    margin-top: -90px;
+    
+  }
+  
+  .skills .img{
+    flex: 0 0 100%;
+    max-width: 120%;
+    margin-bottom: 10px;
+ }
+ .skills .img img{
+  width: 52vh;
+  display:block;
+  margin-bottom: 0px;
+  
+  
+
+
+}
+}
+/*end pskill*/
+
+
+/*end skills*/
+
+footer{
+  padding: 80px 15px;
+  background-color: #0c0c17;
+}
+
+
+
+footer .logo{
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  font-size: 45px;
+  color: #ffffff;
+  font-weight: 900;
+}
+footer .social{
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+footer .social a{
+  color: #999999;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 12px;
+  transition: all .5s  ease;
+}
+footer .social a:hover{
+  color: #ffffff;
+}
+
+.copyright{
+  background-color: #0c0c17;
+  border-top: 1px solid #1d1d27;
+  padding: 15px;
+}
+.copyright p{
+  color: #838383;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+@media(max-width: 767px){
+    
+        
+    
+
+  header .checkbtn{
+    display: block;
+    
+  }
+  
+  header .navbar ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  header .navbar ul li{
+    display: block;
+    margin: 15px 0;
+    line-height: 7px;
+  }
+  header .navbar ul li a{
+    font-size: 16px;
+    
+  }
+  a:hover,a.active{
+    background: none;
+     color: #0082e6;
+    
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+}
+    </style>
+  </head>
+  <body>
+
+    <header class="fixed">
+        <div class="container">
+            <div class="row">
+              <div class="brand-name">
+                  <a href="" class="logo">Vaishnavi</a>
+              </div>
+              
+              <div class="navbar">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                  <i class="fa fa-bars"></i>
+                </label>
+                 <ul>
+                    <li><a href="homeport.html">Home</a></li>
+                    <li><a href="aboutport.html">About</a></li>
+                    <li><a href="skillsport.html">Skills</a></li>
+                    
+                    <li><a href="hobbyport.html">Hobbies</a></li>
+                    <li><a href="contactport.html">Contact</a></li>
+                 </ul>
+               </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pskill">
+    
+        <div class="row">
+            <div class="section-title">
+                <h1>PROFESSIONAL SKILLS</h1>
+                
+            </div>
+        </div>
+        <div class="container3">
+            <ul>
+                <li><div class="my">
+                    <div class="text"><div class="word">1</div></div>
+                    <div class="content">
+                       <h5>Interpersonal Skills</h5>
+                       <p>I like to effectively communicate, interact, and work with
+                            individuals and groups and I think that they can be learn by
+                            ourselves.</p>
+                     </div>
+                 </div>
+                </li>
+                <li><div class="my">
+                    <div class="text"><div class="word">2</div></div>
+                    <div class="content">
+                    <h5>Management Skills</h5>
+                    <p>I think that our success is depends on our management skills like
+                        Planning,Decision Making,Time Management,Delegation,problem Solving,
+                        Understanding,Motivating and many more. </p>
+                    </div>
+                </div>
+               </li>
+                <li><div class="my">
+                    <div class="text"><div class="word">3</div></div>
+                    <div class="content">
+                    <h5>Leadership</h5>
+                    <p>In my point view,it is both a research area and a practical skill with 
+                        the ability of how to "lead" or "guide" others and it must includes
+                        Honesty,Integrity,Innovation and communication.
+                         </p>
+                    </div>
+                </div>
+                </li>
+                <li><div class="my">
+                    <div class="text"><div class="word">4</div></div>
+                    <div class="content">
+                    <h5>Communication Skills</h5>
+                    <p>I believe in that,we grab any success using this skill because conversation 
+                        is more effective with gestures,postures,expressions and written communication.</p>
+                    </div>
+                </div>
+               </li>
+                <li><div class="my">
+                    <div class="text"><div class="word">5</div></div>
+                    <div class="content">
+                    <h5>Active Listening</h5>
+                    <p>I refer 3 A's,which are attitude,attention and adjustment to keep
+                        me on my toes when I need them the most.
+                    </p>
+                    </div>
+                </div>
+               </li>
+                <li><div class="my">
+                    <div class="text"><div class="word">6</div></div>
+                     <div class="content">
+                     <h5>Computer Skills</h5>
+                     <p>For being a professional Computer Engineer this is the most required
+                         skill though it shows our knowledge and ability to use computer 
+                         related technologies efficiently.
+                     </p>
+                    </div>
+               </div>
+            </li>
+            </ul>
+        </div>
+</section>        
+
+
+<!-- skills -->
+<section class="skills" id="skill">
+  <div class="container">
+      
+      <div class="row align-items-center">
+          <div class="skills-content">
+              <div class="row">
+                  <div class="section-title">
+                      <h1>Programming Skills</h1>
+                      <p>I design and develop creative and attractive websites using HTML,CSS and JS.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="skills-box">
+                      <h6>HTML</h6>
+                      <div class="skill-bar">
+                          <div class="skill-bar-in" style="width:92%">
+                              <span>90%</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="skills-box">
+                      <h6>CSS</h6>
+                      <div class="skill-bar">
+                          <div class="skill-bar-in" style="width:85%">
+                              <span>85%</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="skills-box">
+                      <h6>C and C++</h6>
+                      <div class="skill-bar">
+                          <div class="skill-bar-in" style="width:85%">
+                              <span>85%</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="skills-box">
+                      <h6>Python</h6>
+                      <div class="skill-bar">
+                          <div class="skill-bar-in" style="width:80%">
+                              <span>80%</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="skills-box">
+                      <h6>JAVA</h6>
+                      <div class="skill-bar">
+                          <div class="skill-bar-in" style="width:75%">
+                              <span>75%</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="skills-box">
+                      <h6>PHP</h6>
+                      <div class="skill-bar">
+                          <div class="skill-bar-in" style="width:70%">
+                              <span>70%</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="img">
+              <img src="skill.jpg">
+          </div>
+      </div>    
+  </div>
+</section>
+   
+    <!--start footer-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                Vaishnavi
+            </div>
+            <div class="social">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-telegram"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-whatsapp"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+            </div>
+        </div>
+    
+  </footer>
+  
+  <section class="copyright">
+    <div class="container">
+        <p>&copy; 2020 copyright all right reserved</p>
+    </div>
+  </section>
+    <!-- end home-->
+    <script src="newport.js"></script>
+</body>
+</html>
