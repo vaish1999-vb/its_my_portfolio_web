@@ -123,16 +123,12 @@ header .navbar ul li a.active::before{
 #check{
   display: none;
 }
-footer{
-  padding: 80px 15px;
-  background-color: #0c0c17;
-}
 
 /*contact*/
 .contact-us{
   padding: 100px 15px;
   background-color: #f5f8fd;
-  margin-top: 40px;
+  
   
 }
 .contact-us .section-title{
@@ -244,6 +240,13 @@ footer{
 }
 /*end contact*/
 
+
+
+
+footer{
+  padding: 80px 15px;
+  background-color: #0c0c17;
+}
 footer .logo{
   
   flex: 0 0 100%;
@@ -282,12 +285,11 @@ footer .social a:hover{
   font-weight: 400;
   font-size: 15px;
 }
-
 @media(max-width: 767px){
     
         
     
-
+    
   header .checkbtn{
     display: block;
     
@@ -320,13 +322,10 @@ footer .social a:hover{
   #check:checked ~ ul{
     left: 0;
   }
-
   .contact-us{
     margin-top: 2px;
   }
-  .contact-us h1{
-      padding-top: 20px;
-  }
+  
   .contact-us .contact-form{
     padding: 20px;
     
@@ -335,36 +334,38 @@ footer .social a:hover{
     flex: 0 0 100%;
     max-width: 100%;
   }
+
 }
     </style>
   </head>
   <body>
-
-    <header class="fixed">
-        <div class="container">
-            <div class="row">
-              <div class="brand-name">
-                  <a href="" class="logo">Vaishnavi</a>
-              </div>
-              
-              <div class="navbar">
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                  <i class="fa fa-bars"></i>
-                </label>
-                 <ul>
-                    <li><a href="homeport.html">Home</a></li>
-                    <li><a href="aboutport.html">About</a></li>
-                    <li><a href="skillsport.html">Skills</a></li>
-                    
-                    <li><a href="hobbyport.html">Hobbies</a></li>
-                    <li><a href="contactport.html">Contact</a></li>
-                 </ul>
-               </div>
-            </div>
+    
+    <!-- start header -->
+<header class="fixed">
+    <div class="container">
+        <div class="row">
+          <div class="brand-name">
+              <a href="" class="logo">Vaishnavi</a>
+          </div>
+          
+          <div class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fa fa-bars"></i>
+            </label>
+             <ul>
+                <li><a href="homeport.html">Home</a></li>
+                <li><a href="aboutport.html">About</a></li>
+                <li><a href="skillsport.html">Skills</a></li>
+                
+                <li><a href="hobbyport.html">Hobbies</a></li>
+                <li><a href="contactport.html">Contact</a></li>
+             </ul>
+           </div>
         </div>
-    </header>
-    <!-- start contact -->
+    </div>
+</header>
+<!-- start contact -->
 <section class="contact-us">
     <div class="container">
         
@@ -409,7 +410,7 @@ footer .social a:hover{
   </section>
   
   <!-- end contact -->
-    <!--start footer-->
+<!--start footer-->
 <footer>
     <div class="container">
         <div class="row">
@@ -422,6 +423,7 @@ footer .social a:hover{
                 <a href=""><i class="fa fa-instagram"></i></a>
                 <a href=""><i class="fa fa-whatsapp"></i></a>
                 <a href=""><i class="fa fa-linkedin"></i></a>
+  
             </div>
             </div>
         </div>
